@@ -43,4 +43,8 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "simplecov-lcov", ">= 0.8"
 
   gem.add_development_dependency "gem-release", ">= 2.0"
+
+  # requiring all owners to enable MFA on their account
+  # https://guides.rubygems.org/mfa-requirement-opt-in/
+  gem.metadata["rubygems_mfa_required"] = "true"
 end
