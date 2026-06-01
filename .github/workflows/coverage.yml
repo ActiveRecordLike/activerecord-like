@@ -24,19 +24,20 @@ jobs:
       fail-fast: false
       matrix:
         ruby:
-          - "3.3"
+          - "3.4"
         gemfile:
           - gemfiles/rails_7_0.gemfile
           - gemfiles/rails_7_1.gemfile
           - gemfiles/rails_7_2.gemfile
           - gemfiles/rails_8_0.gemfile
+          - gemfiles/rails_8_1.gemfile
     env:
       BUNDLE_GEMFILE: ${{ matrix.gemfile }}
       COVERALLS: true
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
