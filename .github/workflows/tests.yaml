@@ -3,14 +3,16 @@ name: Tests
 on:
   pull_request:
     branches:
-      - development
+      - master
     paths-ignore:
       - 'README.md'
+      - 'CHANGELOG.md'
   push:
     branches:
-      - development
+      - master
     paths-ignore:
       - 'README.md'
+      - 'CHANGELOG.md'
 
 jobs:
   unit_tests:
