@@ -39,6 +39,8 @@ jobs:
           - false
         exclude:
           - ruby: "3.1"
+            gemfile: gemfiles/rails_8_0.gemfile
+          - ruby: "3.1"
             gemfile: gemfiles/rails_8_1.gemfile
         include:
           - ruby: ruby-head
